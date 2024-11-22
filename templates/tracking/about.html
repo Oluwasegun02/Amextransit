@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="bg-gray-100 min-h-screen py-10 px-4 md:px-10 lg:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-lg shadow-lg overflow-hidden">
+    <!-- Image Section -->
+    <div class="h-80 md:h-full">
+      <img 
+        src="{% static 'images/about.jpg' %}" 
+        alt="About Us" 
+        class="w-full h-full object-cover"
+      >
+    </div>
+
+    <!-- Content Section -->
+    <div class="p-6 md:p-12">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6">ABOUT US</h1>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        The concept of one contact is growing more significant as the globe becomes a global village and as people and goods are transported from one continent to another. You therefore have a significant challenge: how to reduce costs without compromising quality, regardless of whether your duty is to carry products or manage logistics. Amex Transit is a global logistics service company providing in logistics and supplies solutions to individual and corporate clients throughout the world. Multimodal transport operations, such as consolidation, handling of full container loads, handling of over-dimensional cargo, airfreight, transport logistics, customs clearance, warehousing, courier services, and the use of a separate container freight station, such as COMPACT FREIGHT SYSTEMS, are among the services provided.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Amextransit delivers value by providing supplies support to its clients through a vast global network of partners, making it simple for the business to source products overseas on behalf of prestigious clients at very affordable pricing. Although people make a difference, technology makes things easier. Online transactions are now rapid and simple, and we see ourselves as leaders in the application of cutting-edge technology to accelerate information flow. With bespoke TMS (Transportation Management Systems) integration and applications like one-click inventory and product tracking systems, you’ll have your cargo at your fingertips.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Although we appreciate the value of utilizing the latest technology, we also know that a successful delivery rests on the satisfaction and dedication of our staff. We feel that having the most knowledgeable, courteous, and professional workforce in the industry is crucial when selecting a logistics supplier.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

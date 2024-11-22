@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+  <h1>Consignment Dashboard</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Tracking Number</th>
+        <th>Booked ON</th>
+        <th>Category</th>
+        <th>Destination</th>
+        <th>Tariff</th>
+        <th>Source Country</th>
+        <!-- Add other table headers -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for consignment in consignments %}
+      <tr>
+        <td>{{ consignment.tracking_number }}</td>
+        <td>{{ consignment.booked_on}}</td>
+        <td>{{ consignment.category}}</td>
+        <td>{{ consignment.destination}}</td>
+        <td>{{ consignment.tariff }}</td>
+        <td>{{ consignment.source_country }}</td>
+        <!-- Add other table cells -->
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg">Create Post</button>
+  </form>
+</main>
+{% endblock content %}

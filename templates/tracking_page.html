@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+  <!-- Meta tags, title, and CSS links -->
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Header content (logo, navigation, etc.) -->
+  </header>
+  <main>
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="tracking_number" placeholder="Enter tracking number">
+      <button type="submit">Track</button>
+    </form>
+    <div id="result">
+      {% if tracking_data %}
+      <p>Tracking results for {{ tracking_data.tracking_number }}:</p>
+      <p>Status: {{ tracking_data.status }}</p>
+      <!-- Add other relevant data -->
+      {% endif %}
+    </div>
+  </main>
+</body>
+
+</html>

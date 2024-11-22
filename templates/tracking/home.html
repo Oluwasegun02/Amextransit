@@ -1,0 +1,117 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="showhead">
+  <h4>Welcome To Amex Transit</h4>
+  <div class="text2">
+    <h3><strong>Affordable Shipping, </br> Fast, Secure & Reliable</strong></h3>
+
+    <div class="texts">
+      <h3>Track your shipment</h3>
+      <div class="tracking-input-container">
+        <button id="track-btn" class="submit2"><a href="{% url 'tracking' %}">Track Your Pacel</a></button>
+      </div>
+      <p class="message" id="tracking-message"></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="comlog">
+  <h4>
+    We are able to ship from Germany, the United Kingdom, India, the United States of America, Spain, France, Poland,
+    China, Singapore, Italy, the United Arab Emirates, and Dubai thanks to our robust worldwide capacity in over 80
+    nations that span all continents
+  </h4>
+  <ul>
+    <img src="{% static 'images/toyota.png' %}" alt='toyota' />
+    <img src="{% static 'images/americatrade.png' %}" alt="america" />
+    <img src="{% static 'images/apple.jpeg' %}" alt="" />
+    <img src="{% static 'images/bmw.png' %}" alt="" />
+    <img src="{% static 'images/ebay.png' %}" alt="" />
+
+  </ul>
+</div>
+
+<div class="blog">
+  <div class="content">
+    <i></i>
+    <h3>Sea Shipping</h3>
+    <p>
+      Amextransit's primary business is shipping freight, therefore we can provide our clients with a variety of service
+      options. Our marine freight services cover consolidated shipments, general specialty or bulk goods, as well as
+      less container load (LCL) and full container load (FCL) shipments.
+    </p>
+  </div>
+  <div class="content">
+    <i></i>
+    <h3>Air Freight</h3>
+    <p>
+      Amextransit's primary core business is also air freight, so we can provide our clients with a variety of
+      customizable service alternatives. Because to our volume agreements with significant Air lines, we are able to get
+      value-based pricing and outstanding space commitments.
+    </p>
+  </div>
+  <div class="content">
+    <i></i>
+    <h3>Road Logistics</h3>
+    <p>We cater for all transport requirements to all East African destinations using our own fleet of trucks, which
+      ranges from half-ton pickups to 40-ton semi-trailers, whether it be personal goods or business cargo,
+      containerized or loose.
+    </p>
+  </div>
+</div>
+
+
+<section id="infomal">
+  <div class="side">
+    <h6>ABOUT US</h6>
+    <h2>The concept is growing more significantly as people and goods are transported from one continent to another</h2>
+    <p>
+      Amex Transit is a global logistics service company providing in logistics and supplies solutions to individual and
+      corporate clients throughout the world, Amextransit delivers value by providing supplies support to its clients
+      through a vast global network of partners, making it simple for the business to source products overseas on behalf
+      of prestigious clients at very affordable pricing...
+    </p>
+  </div>
+  <div class="side">
+    <img src="{% static 'images/about.jpg' %}" alt="">
+  </div>
+  <!-- about -->
+</section>
+
+<div class="make">
+  <h2>Through its more than 80 global network offices, Amex Cargo today transports cargo to every city in the United
+    States by land, air, and sea.</h2>
+  <div class="easy">
+    <i></i>
+    <h4>HEAD OFFICE</h4>
+    <p>
+      15000, West Airport Boulevard Sugar Land,
+Houston, Texas 77498, USA.
+    </p>
+  </div>
+  <div class="easy">
+    <i></i>
+    <h4>BRANCH OFFICE</h4>
+    <p>
+      31C-D, Tower B, Reith International No. 1002 Yanhe North Road, Luohu District, Shenzhen, P.R. China,
+Shenzhen, Guangdong, 518000.
+    </p>
+  </div>
+  <div class="easy">
+    <i></i>
+    <h4>BRANCH OFFICE </h4>
+    <p>
+      HongKong Cheung Tat Centre, 18 Cheung
+Lee St, Chai Wan, Hong Kong.
+    </p>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock content %}

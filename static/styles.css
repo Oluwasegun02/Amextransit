@@ -1,0 +1,947 @@
+/* General Styles */
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h2,
+h3,
+h4 {
+  color: #1e1e1e;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(45deg, #1f2937, #4b5563);
+  padding: 15px 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #ff4c4c;
+  transition: 0.3s;
+}
+/* Hero Section */
+.showhead {
+  height: 100vh;
+  width: auto;
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 30px;
+  text-align: left;
+}
+
+.showhead h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.showhead h3 {
+  color: #fff;
+  font-size: 3.3rem;
+}
+/* Tracking Section */
+.text2 {
+  text-align: left; /* Center the heading */
+  margin: 40px 0; /* Spacing above and below */
+}
+
+.tracking-input-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: left; /* Center items horizontally */
+  align-items: left; /* Center items vertically */
+  margin-top: 40px; /* Spacing between heading and input */
+}
+
+.tracking-input-container input {
+  padding: 10px; /* Inner spacing */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  width: 250px; /* Fixed width */
+  margin-right: 10px; /* Spacing between input and button */
+  font-size: 16px; /* Font size */
+}
+
+.tracking-input-container button {
+  padding: 10px 20px; /* Inner spacing */
+  background-color: #1286ce; /* Dark blue background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background change */
+  text-decoration: none;
+}
+
+.tracking-input-container button:hover {
+  background-color: #154a63; /* Darker shade on hover */
+}
+#track-btn a {
+  text-decoration: none;
+  color: #fff;
+  align-items: left !important;
+  justify-content: left;
+}
+.text2 {
+  margin-top: 5%;
+}
+.text2 h5 {
+  padding: 5%;
+  width: 50%;
+  text-align: left;
+  color: #ccc;
+}
+
+.showhead input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  width: 300px;
+}
+.text input[type="text"] {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 80%;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.submit2 {
+  border: #ccc none 50px;
+  padding: 9px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+}
+.submit2:hover {
+  background-color: #45a049;
+}
+
+/* Company Info */
+.comlog {
+  background: #1e1e1e;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.comlog h4 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+.comlog ul {
+  display: flex;
+  justify-content: center;
+}
+.comlog img {
+  width: 100px;
+  margin: 10px;
+}
+
+/* Blog Section */
+.blog {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 30px;
+  background-color: #f7fafc;
+}
+
+.blog .content {
+  width: 30%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.blog .content:hover {
+  transform: translateY(-10px);
+}
+
+.blog h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Features Section */
+.make {
+  background-color: #f0f0f5;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.make h2 {
+  margin-bottom: 40px;
+}
+
+.make .easy {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.make .easy i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.make h4 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Form Section */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc; /* Soft background color */
+}
+
+/* Section Layout */
+#infomal {
+  display: flex;
+  justify-content: space-between; /* Spread divs equally */
+  align-items: center; /* Vertically center content */
+  width: 100%;
+  height: auto; /* Full viewport height */
+  padding: 0 5%; /* Side padding for breathing room */
+  background: linear-gradient(
+    135deg,
+    #dee3e4,
+    #f2f7f8
+  ); /* Gradient background */
+}
+
+/* Common Styling for Both Side Div and Form */
+.side {
+  margin: 5%;
+  flex: 1; /* Take up equal space */
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+
+  transition: transform 0.4s ease; /* Smooth transition for hover effects */
+}
+
+.side:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  background-color: white;
+}
+
+/* Styling for Left Side */
+.side h6 {
+  font-size: 18px;
+  margin-top: 0;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Stylish spacing */
+}
+
+.side h2 {
+  font-size: 36px;
+  color: #1b4965;
+  margin: 10px 0;
+}
+
+.side p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #2193b0; /* Focused input border */
+  outline: none;
+}
+
+input[type="button"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+  background-color: #218838; /* Darker on hover */
+}
+
+#delivery-fee,
+#total {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button Animation */
+input[type="button"]:hover {
+  background-color: #218838;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Button shadow effect */
+}
+
+input[type="button"]:active {
+  background-color: #1e7e34;
+  box-shadow: none;
+  transform: translateY(2px); /* Subtle click effect */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  #infomal {
+    flex-direction: column; /* Stack div and form vertically */
+  }
+  .side {
+    margin-bottom: 20px;
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+}
+/* Testimonials Section */
+/* Testimonial Section Container */
+.testimonial {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 60px 20px; /* Spacing */
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+}
+
+/* Heading Styling */
+.testimonial h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Testimonial Container for Sliding Effect */
+.testimonial-container {
+  display: flex;
+  overflow: hidden; /* Hide overflowing testimonials */
+  position: relative;
+  width: 100%; /* Full width for flex container */
+}
+
+/* Individual Testimonial Slide */
+.testimonial-slide {
+  min-width: 100%; /* Full width for each slide */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  opacity: 0; /* Initially hidden */
+}
+
+.testimonial-slide.active {
+  opacity: 1; /* Show the active slide */
+}
+
+/* Blockquote Styling */
+blockquote {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 0 auto;
+  width: 80%; /* Center blockquote */
+}
+
+blockquote span {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Review Info Styling */
+.review__info {
+  margin-top: 10px;
+}
+
+.review__info-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b4965;
+}
+
+.review__info-type {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+.review__photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Animation for hover */
+}
+
+.review__photo:hover {
+  transform: rotate(360deg); /* Rotate effect on hover */
+}
+
+/* Review Dots (Pagination Dots) */
+.review-dots {
+  margin-top: 20px;
+}
+
+.review-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-dot:hover {
+  background-color: #1b4965; /* Change color on hover */
+}
+
+/* Active dot */
+.review-dot.active {
+  background-color: #1b4965;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Testimonial Section */
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 40px 10px;
+  }
+
+  blockquote {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .review__photo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* General Styles */
+.about-section,
+.contact-section {
+  background-color: #f9f9f9; /* Light background */
+  padding: 60px 20px; /* Spacing */
+  text-align: center; /* Center align text */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Section Headings */
+.about-section h2,
+.contact-section h2 {
+  font-size: 28px;
+  color: #1b4965; /* Dark blue */
+  margin-bottom: 20px;
+}
+
+.about-section p,
+.contact-section p {
+  font-size: 16px;
+  color: #666; /* Dark gray */
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* About Features */
+.about-features {
+  display: flex;
+  justify-content: space-around; /* Space out features */
+  margin-top: 40px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 30%; /* Each feature takes up 30% */
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #1b4965;
+  margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+#contact-form {
+  max-width: 600px; /* Centered form */
+  margin: 0 auto;
+}
+
+#contact-form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #1b4965;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%; /* Full width */
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 14px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+#contact-form button {
+  margin-top: 20px;
+  padding: 12px 20px; /* Button padding */
+  background-color: #1b4965; /* Dark blue */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#contact-form button:hover {
+  background-color: #154360; /* Darker blue on hover */
+}
+
+/* Footer */
+/* Footer Container Styling */
+.folder {
+  background-color: #141618; /* Dark background */
+  padding: 40px 0;
+  color: white;
+  text-align: center; /* Center-align content */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Heading Styling */
+.folder h1 {
+  font-size: 36px;
+  color: #ffffff; /* White text */
+  margin-bottom: 10px;
+  letter-spacing: 3px; /* Spacing for style */
+}
+
+.folder h1 i {
+  display: inline-block;
+  background-image: url("logo.png"); /* Add logo image if necessary */
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* Subheading Styling */
+.folder h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #cccccc; /* Lighter gray for subheading */
+  margin-bottom: 30px;
+}
+
+/* Footer Links Styling */
+.folder ul {
+  list-style: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Spacing between items */
+}
+
+.folder ul li {
+  display: inline-block;
+}
+
+.folder ul li a {
+  color: #ffffff; /* White links */
+  font-size: 16px;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.folder ul li a:hover {
+  color: #f1c40f; /* Change color on hover */
+}
+
+/* Additional Links (Terms and Privacy) */
+.lastly h6 {
+  font-size: 14px;
+  color: #cccccc;
+  margin: 10px 0;
+}
+
+.lastly h6 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lastly h6 a:hover {
+  color: #f1c40f;
+}
+
+/* Footer Responsiveness */
+@media (max-width: 768px) {
+  .folder ul {
+    flex-direction: column;
+    gap: 20px; /* Spacing for stacked layout */
+  }
+
+  .folder h1 {
+    font-size: 28px; /* Smaller heading on small screens */
+  }
+
+  .folder h3 {
+    font-size: 16px; /* Smaller subheading on small screens */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .blog {
+    flex-direction: column;
+  }
+
+  .blog .content {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .make .easy {
+    margin-bottom: 30px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog .content {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.menu h2 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.testimonial blockquote {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Terms and Privacy Policy Sections */
+.terms-section,
+.privacy-section {
+  background-color: #f9f9f9; /* Light background */
+  padding: 60px 20px; /* Spacing */
+  text-align: left; /* Left align text */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.terms-section h2,
+.privacy-section h2 {
+  font-size: 28px;
+  color: #1b4965; /* Dark blue */
+  margin-bottom: 20px;
+}
+
+.terms-section h3,
+.privacy-section h3 {
+  font-size: 20px;
+  color: #1b4965;
+  margin-top: 20px;
+}
+
+.terms-section p,
+.privacy-section p {
+  font-size: 16px;
+  color: #666; /* Dark gray */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Tracking Page */
+#tracking-page {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.tracking-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tracking-header h1 {
+  font-size: 2rem;
+  color: #1b4965;
+}
+
+.tracking-header input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.tracking-header button {
+  padding: 10px 20px;
+  background-color: #1b4965;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tracking-header button:hover {
+  background-color: #154a63;
+}
+
+.tracking-info {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.shipment-detail {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  max-width: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.detail-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.shipment-timeline {
+  margin-top: 20px;
+}
+
+.shipment-timeline h3 {
+  margin-bottom: 10px;
+}
+
+.shipment-timeline ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.shipment-timeline li {
+  margin-bottom: 10px;
+}
+
+.timestamp {
+  font-weight: bold;
+  color: #888;
+}
+
+.event {
+  margin-left: 10px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+#result {
+  margin-top: 20px;
+}

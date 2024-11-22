@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Amextransit{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" >
+
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <!-- <link rel="stylesheet" href="../static/styles.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fs-5 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'homepage' %}"><pre>AMEXTRANSIT     +1805-419-0249</pre></a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tracking' %}">Track</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'aboutpage' %}">AboutUs</a>
+          </li>
+          <li class="nav-item"></li>
+          <a class="nav-link" href="{% url 'contactpage' %}">ContactUs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- main body -->
+  <div class="badboy">
+    {% block content %}
+
+    {% endblock content %}
+  </div>
+  <!-- folder -->
+  <div class="folder">
+    <h1>Amex Transit <i></i></h1>
+    <h3>Experience fast, affordable and reliable shipping worldwide</h3>
+
+    <div class="lastly">
+      <h6>Privacy Policy</h6>
+    </div>
+
+  </div>
+</body>
+
+</html>

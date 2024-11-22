@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-10">
+  <!-- Form Section -->
+  <div class="bg-white w-full max-w-lg shadow-lg rounded-lg p-6">
+    <h1 class="text-2xl font-semibold text-gray-800 text-center mb-6">Track Your Shipment</h1>
+    <form method="post" class="space-y-4">
+      {% csrf_token %}
+      <div class="flex items-center">
+        <input 
+          type="text" 
+          name="tracking_number" 
+          placeholder="Enter tracking number"
+          class="w-full p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+        <button 
+          type="submit" 
+          class="bg-sky-500 hover:bg-sky-900 text-white px-5 py-3 rounded-r-lg transition-all duration-300 font-medium p-3"
+        >
+          Track
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Results Section -->
+  <div id="result" class="mt-10 w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
+    {% if tracking_data.tracking_number == null %}
+    <p class="text-red-500 text-center font-medium">{{ tracking_data.error }}</p>
+    {% elif tracking_data %}
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Tracking results for:</h2>
+    <p class="text-blue-500 font-medium">Tracking Number: {{ tracking_data.tracking_number }}</p>
+    <div class="mt-4 space-y-2">
+      <p class="text-gray-700"><strong>Status:</strong> {{ tracking_data.status }}</p>
+      <p class="text-gray-700"><strong>Origin:</strong> {{ tracking_data.source_country }}</p>
+      <p class="text-gray-700"><strong>Destination:</strong> {{ tracking_data.destination }}</p>
+      <p class="text-gray-700"><strong>Tariff:</strong> {{ tracking_data.tariff }}</p>
+    </div>
+    {% endif %}
+  </div>
+</main>
+
+{% endblock content %}
