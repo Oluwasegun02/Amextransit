@@ -20,10 +20,27 @@ def tracking_page(request):
             consignment = Consignment.objects.get(tracking_number=tracking_number)
             tracking_data = {
                 'tracking_number': consignment.tracking_number,
-                'status': consignment.status,
-                'source_country': consignment.source_country,
+                'bookedOn': consignment.booked_on,
+                'category': consignment.category,
                 'destination': consignment.destination,
                 'tariff': consignment.tariff,
+                'source_country': consignment.source_country,
+                # Add delivery details
+                'status': consignment.status,
+                'delivered': consignment.delivered_to,
+                'delivered_to_date': consignment.delivered_on,
+                # Add Sender details
+                'senderName': consignment.sender_name,
+                'senderEmail': consignment.sender_email,
+                'senderAddress': consignment.sender_address,
+                'senderPhone': consignment.sender_mobile,
+                # Add receiver details
+                'receiverName': consignment.receiver_name,
+                'receiverEmail': consignment.receiver_email,
+                'receiverAddress': consignment.receiver_address,
+                'receiverPhone': consignment.receiver_mobile,
+
+                'goods': consignment.content_of_shipment,
             }
         except  Consignment.DoesNotExist:
             tracking_data = {'error': 'Tracking number not found'}
