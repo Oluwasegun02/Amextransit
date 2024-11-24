@@ -25,7 +25,7 @@
   
 
   <!-- Results Section -->
-  <div id="result" class="mt-10 w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
+    <div id="result" class="mt-10 w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
     {% if tracking_data.tracking_number == null %}
       <p class="text-red-500 text-center font-medium">{{ tracking_data.error }}</p>
     {% elif tracking_data %}
@@ -37,28 +37,37 @@
         <p class="text-gray-700"><strong>Destination:</strong> {{ tracking_data.destination }}</p>
         <p class="text-gray-700"><strong>Tariff:</strong> {{ tracking_data.tariff }}</p>
       </div>
+      <br>
       <hr>
-      <h2>Delivery details</h2>
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Delivery details</h2>
       <div class="mt-4 space-y-2">
         <p class="text-gray-700"><strong>Status:</strong> {{ tracking_data.status}}</p>
         <p class="text-gray-700"><strong>Delivered To:</strong> {{ tracking_data.delivered }}</p>
         <p class="text-gray-700"><strong>Delivery Date:</strong> {{ tracking_data.delivered_to_date }}</p>
       </div>
+      <br>
       <hr>
-      <h2>Sender details</h2>
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Sender details</h2>
       <div class="mt-4 space-y-2">
         <p class="text-gray-700"><strong>Sender Name:</strong> {{ tracking_data.senderName}}</p>
         <p class="text-gray-700"><strong>Sender Email:</strong> {{ tracking_data.senderEmail }}</p>
         <p class="text-gray-700"><strong>Sender Address:</strong> {{ tracking_data.senderAddress }}</p>
         <p class="text-gray-700"><strong>Sender Phone No:</strong> {{ tracking_data.senderPhone }}</p>
       </div>
+      <br>
       <hr>
-      <h2>Receiver details</h2>
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Receiver details</h2>
       <div class="mt-4 space-y-2">
         <p class="text-gray-700"><strong>Receiver Name:</strong> {{ tracking_data.receiverName}}</p>
         <p class="text-gray-700"><strong>Receiver Email:</strong> {{ tracking_data.receiverEmail }}</p>
         <p class="text-gray-700"><strong>Receiver Address:</strong> {{ tracking_data.receiverAddress }}</p>
         <p class="text-gray-700"><strong>Receiver Phone No:</strong> {{ tracking_data.receiverPhone }}</p>
+      </div>
+      <br>
+      <hr>
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Delivery Items</h2>
+      <div class="mt-4 space-y-2">
+        <div class="text-gray-700"> <strong>Items: </strong> {{ tracking_data.goods}}</div>
       </div>
     {% endif %}
   </div>
