@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import psycopg2
+from decouple import config
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +32,7 @@ SECRET_KEY = 'django-insecure-9i(7yhnxd$=@i*2-i2fy)nqe78&!*orv7&s=#vco4$79kl7ogx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,12 +81,21 @@ WSGI_APPLICATION = 'courier_tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST', default='127.0.0.1'),
+        'PORT': config('DB_PORT', default='3306'),
     }
 }
+
+        
+
+
 
 
 # Password validation
@@ -126,3 +141,4 @@ MEDIA_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
